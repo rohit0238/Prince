@@ -6,7 +6,7 @@ const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
 
 
-const SERVER_URL = "https://noderfree.vercel.app/api/server";
+const SERVER_URL = "https://prince-flax.vercel.app/api/server";
 
 
 

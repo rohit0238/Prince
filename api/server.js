@@ -33,38 +33,11 @@ export default async function handler(req, res) {
          // 3. Advanced Prompt Engineering
         const finalPrompt = `
                 ACT AS: ChatGPT, an experienced full-stack developer.
-                Write code in the same natural, clean, human-readable style that ChatGPT normally uses.
+                        Write code in the same natural, clean, human-readable style that ChatGPT normally uses.
 
                 TASK:
-                Create an exact implementation matching this academic coding question. Ensure your implementation strictly aligns with the scope and technologies defined in the following course syllabus:
-
-                --- SYLLABUS START ---
-                Course Title: Front End Frameworks and Libraries (24CS014)
-                1-2: Intro to Front-End Frameworks (Framework vs Library, Benefits)
-                3-4: Intro to React, Angular and Vue (Differences, Use cases)
-                5-8: JavaScript Recap (Functions, Arrays & Objects)
-                9-11: Promises & async/await, Error handling
-                12-13: Fetch vs XMLHttpRequest, rendering responses
-                14-17: Axios (Installation, API requests)
-                18-20: Intro to React, Virtual DOM, Webpack, JSX
-                21-22: Component driven approach (Class & Function Components)
-                23-25: Class Component Life Cycle
-                26-27: Props (Default, Dynamic, passing data)
-                28-29: State Management (useState in function, state in class components)
-                30-31: Forms and Event Handling in React
-                32-35: Rendering data from APIs in react components using useEffect hook
-                36-39: TypeScript Intro (Advantages, Setup, Converting to JS)
-                40-41: TS Basic Types (Type Annotation, Number, String, Boolean, Object, Array)
-                42-43: TS Functions (Function Types, Return Type, Optional, Default, Rest, Overloading)
-                44-45: Enums and Generics
-                46-48: Tuples and Advanced Types
-                49-50: Classes and Interfaces
-                51-54: DOM Manipulation & Events in TypeScript (Strict types, Event listeners)
-                55-60: Error Handling in DOM operations
-                --- SYLLABUS END ---
-
-                QUESTION:
-                "\${cleanUserPrompt}"
+                Create an exact implementation matching this academic coding question:
+                "${cleanUserPrompt}"
 
                 RETURN FORMAT:
                 [
@@ -189,7 +162,7 @@ export default async function handler(req, res) {
                 - Correct imports/exports based on generated structure
                 - Append "_1393" to the end of source code filenames, right before the file extension (e.g., "App_1393.tsx", "server_1393.js", "Navbar_1393.jsx", "socket_1393.ts")
                 - STRICTLY Do NOT append "_1393" to dependency, configuration, or entry HTML files (must be exactly "package.json", "tsconfig.json", "vite.config.ts", "index.html", ".gitignore")
-                - CRITICAL: Ensure all import/require statements inside the generated code perfectly match the newly appended "_1413" filenames.
+                - CRITICAL: Ensure all import/require statements inside the generated code perfectly match the newly appended "_1393" filenames.
                 - Simple task → minimal files
                 - Medium task → modular structure
                 - Complex/full-stack task → properly separated frontend/backend structure
